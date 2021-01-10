@@ -1,8 +1,12 @@
-let charlistValue1 = document.querySelector('.card-description_charlist_value_1');
-charlistValue1.textContent = '4 Ядра';
-
-let charlistValue2 = document.querySelector('.card-description_charlist_value_2');
-charlistValue2.textContent = '6 ГБ';
-
-let charlistValue3 = document.querySelector('.card-description_charlist_value_3');
-charlistValue3.textContent = '100 Гб SSD';
+const valueForCard = {
+   cardCaption: 'Популярный выбор',
+   cardName: 'M Ultra',
+   cardDescription: 'CentOS 8',
+   CPUCardParam: 'CPU Intel® Xeon® Gold',
+   valueForCPUCardParam: '4 Ядра',
+   RAMCardParam:'RAM',
+   valueRAMCardParam: '6 ГБ',
+   SSDCardParam: 'Диск NVMe',
+   valueSSDCardParam: '100 Гб SSD'
+}
+document.querySelectorAll('[data-type]').forEach(item => item.textContent = valueForCard[item.dataset.type])
